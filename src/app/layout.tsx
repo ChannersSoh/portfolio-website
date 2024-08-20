@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link"
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -17,20 +18,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-100`}>
-        <header className="bg-blue-600 text-white p-4">
+        <header className="bg-cyan-400 text-white p-4">
           <nav className="max-w-4xl mx-auto">
             <ul className="flex space-x-4">
-              <li><a href="/" className="hover:underline">Home</a></li>
-              <li><a href="/about" className="hover:underline">About</a></li>
-              <li><a href="/blog" className="hover:underline">Projects</a></li>
-              <li><a href="/blog" className="hover:underline">Contact Me</a></li>
+              <li><Link href="/" className="hover:underline">Home</Link></li>
+              <li><Link href="/about" className="hover:underline">About</Link></li>
+              <li><Link href="/projects" className="hover:underline">Projects</Link></li>
+              <li><Link href="/contact-me" className="hover:underline">Contact Me</Link></li>
             </ul>
           </nav>
         </header>
         <main className="max-w-4xl mx-auto p-4">
           {children}
         </main>
-        <footer className="bg-blue-600 text-white p-4 mt-8">
+        <footer className="bg-cyan-400 text-white p-4 mt-8">
           <div className="max-w-4xl mx-auto text-center">
             &copy; {new Date().getFullYear()} My Blog. All rights reserved.
           </div>
