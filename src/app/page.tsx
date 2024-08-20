@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div>
+    <main>
       <h1 className="text-4xl font-bold text-center mb-8">Welcome to My Portfolio</h1>
 
       <div className="grid gap-8">
@@ -13,6 +13,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 </p>
         </article>
       </div>
-    </div>
+    </main>
   );
 }
