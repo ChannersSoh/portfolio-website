@@ -1,3 +1,4 @@
+import NcNews from "./nc-news/page"; 
 export default function Page() {
-    return <p>Projects Page</p>;
-  }
+  return <NcNews />;
+}
