@@ -36,6 +36,15 @@ const Gamerly: React.FC = () => {
         </ul>
       </section>
 
+      <a
+        href="https://github.com/ChannersSoh/nc-news"
+        className="text-blue-500 hover:text-blue-700 mt-2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Github Repository
+      </a>
+
       <div className="mt-8 text-center">
         <video className="mx-auto rounded-lg shadow-lg" controls width="600">
           <source src="/ui/pictures/gamerly.mp4" type="video/mp4" />
