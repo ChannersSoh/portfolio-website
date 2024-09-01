@@ -24,7 +24,6 @@ export default function RootLayout({
               <li><Link href="/" className="hover:underline">Home</Link></li>
               <li><Link href="/about" className="hover:underline">About</Link></li>
               <li><Link href="/projects" className="hover:underline">Projects</Link></li>
-              <li><Link href="/contact-me" className="hover:underline">Contact Me</Link></li>
             </ul>
           </nav>
         </header>
@@ -33,7 +32,7 @@ export default function RootLayout({
         </main>
         <footer className="bg-cyan-400 text-white p-4 mt-8">
           <div className="max-w-4xl mx-auto text-center">
-            &copy; {new Date().getFullYear()} My Blog. All rights reserved.
+            &copy; {new Date().getFullYear()} Charnjeet's Portfolio. All rights reserved.
           </div>
         </footer>
       </body>

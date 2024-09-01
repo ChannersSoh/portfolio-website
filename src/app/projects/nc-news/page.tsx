@@ -13,7 +13,7 @@ const Ncnews: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg text-center">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">NC News</h1>
-      <p className="text-lg text-gray-800 mb-6">
+      <p className="text-gray-800 mb-6">
         NC News was the first project completed as part of the NorthCoders bootcamp. The aim of this project was to create a fully functional news website that allows users to engage with content in a meaningful way.
       </p>
 

@@ -20,8 +20,8 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full max-w-lg mx-auto overflow-hidden">
-      <div className="relative h-64 overflow-hidden rounded-lg">
+    <div className="relative w-full h-full max-w-lg mx-auto overflow-hidden">
+      <div className="relative overflow-hidden rounded-sm">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
