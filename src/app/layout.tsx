@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link"
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -17,20 +17,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-100`}>
-        <header className="bg-cyan-400 text-white p-4">
-          <nav className="max-w-4xl mx-auto">
-            <ul className="flex space-x-4">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/about" className="hover:underline">About</Link></li>
-              <li><Link href="/projects" className="hover:underline">Projects</Link></li>
-            </ul>
+      <body className={`${inter.className} bg-gray-100 flex flex-col min-h-screen`}>
+        <header className="bg-sky-800 text-white p-4 shadow-md fixed top-0 w-full z-10">
+          <nav className="max-w-5xl mx-auto flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+            <Link href="/">
+                <img src="/ui/pictures/portfolio.png" alt="Logo" className="h-12 w-12" /> 
+              </Link>
+              <ul className="flex space-x-4 md:space-x-6">
+                <li><Link href="/" className="hover:underline">Home</Link></li>
+                <li><Link href="/about" className="hover:underline">About</Link></li>
+                <li><Link href="/projects" className="hover:underline">Projects</Link></li>
+              </ul>
+            </div>
           </nav>
         </header>
-        <main className=" mx-auto p-4">
+        <main className="flex-grow mx-auto p-4 mt-16">
           {children}
         </main>
-        <footer className="bg-cyan-400 text-white p-4 mt-8">
+        <footer className="bg-sky-800 text-white p-4">
           <div className="max-w-4xl mx-auto text-center">
             &copy; {new Date().getFullYear()} Charnjeet's Portfolio. All rights reserved.
           </div>
@@ -39,4 +44,3 @@ export default function RootLayout({
     </html>
   );
 }
-

@@ -1,13 +1,37 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 interface CarouselProps {
   images: string[];
+  autoCycle?: boolean;
+  cycleInterval?: number; 
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images }) => {
+const Carousel: React.FC<CarouselProps> = ({ images, autoCycle = true, cycleInterval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); 
+
+  const startAutoCycle = () => {
+    if (autoCycle) {
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, cycleInterval);
+    }
+  };
+
+  const stopAutoCycle = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+  };
+
+  const handleUserInteraction = (action: () => void) => {
+    stopAutoCycle();
+    action();
+    startAutoCycle();
+  };
 
   const prevSlide = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
@@ -19,6 +43,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     setCurrentIndex(newIndex);
   };
 
+  
+  useEffect(() => {
+    startAutoCycle();
+    return () => stopAutoCycle(); 
+  }, [autoCycle, cycleInterval, images.length]);
+
   return (
     <div className="relative w-full h-full max-w-lg mx-auto overflow-hidden">
       <div className="relative overflow-hidden rounded-sm">
@@ -29,16 +59,16 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         />
       </div>
       <button
-        onClick={prevSlide}
+        onClick={() => handleUserInteraction(prevSlide)}
         className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100"
       >
-        &#9664;
+        <FaArrowLeft className="text-black" />
       </button>
       <button
-        onClick={nextSlide}
+        onClick={() => handleUserInteraction(nextSlide)}
         className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100"
       >
-        &#9654;
+        <FaArrowRight className="text-black" /> 
       </button>
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 space-x-2">
         {images.map((_, index) => (
@@ -47,7 +77,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             className={`w-2 h-2 rounded-full ${
               currentIndex === index ? 'bg-blue-500' : 'bg-gray-400'
             }`}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => handleUserInteraction(() => setCurrentIndex(index))}
           />
         ))}
       </div>

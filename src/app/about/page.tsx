@@ -1,6 +1,16 @@
-export default function Page() {
+import Carousel from '../ui/components/carousel';
+const AboutMe: React.FC = () => {
+    const images = [
+    "/ui/pictures/my-pic-1.jpg",
+    "/ui/pictures/my-pic-2.jpg",
+    "/ui/pictures/my-pic-3.jpg",
+    "/ui/pictures/my-pic-4.jpg",
+    "/ui/pictures/my-pic-6.jpg", 
+    "/ui/pictures/my-pic-5.jpg"  
+  ];
+  
     return (
-      <main className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg text-center">
+      <main className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">About Me</h1>
         <p  className="text-gray-800 mb-6">I am an aspiring Junior Software Developer with a background in science and analysis. After spending some time in the scientific field and experiencing a bout of illness, I took the opportunity to reflect on what I truly wanted to do with my career. This introspection led me to pursue a career change into software development, where I can contribute to building complex and sophisticated web applications.</p>
 
@@ -9,6 +19,12 @@ export default function Page() {
         <p  className="text-gray-800 mb-6">In addition to my proficiency with HTML, CSS, and JavaScript, I am skilled in various other frontend technologies such as React and React Native, as well as backend technologies like Node.js with Express and PostgreSQL. I also have experience using TypeScript and Next.js, both of which were used to create this website. My strengths include problem-solving and analytical thinking, which enable me to tackle coding challenges effectively.</p>
         
         <p  className="text-gray-800 mb-6">Outside of work, I enjoy traveling and walking. I have visited various countries, such as Japan and India, but I also greatly enjoy exploring the UK. Other hobbies I enjoy include reading and playing games, where I love immersing myself in storytelling. Additionally, I have a passion for cooking; the gratification of making my own food through a combination of research and experimentation provides me with a sense of fulfillment.</p>
+
+        <div className="mb-6">
+        <Carousel images={images} />
+      </div>
       </main>
     );
   };
+
+  export default AboutMe

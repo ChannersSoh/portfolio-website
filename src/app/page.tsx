@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto p-6 md:p-8 lg:p-12">
+    <main className="max-w-6xl mx-auto pt-9 pb-6 md:pt-11 lg:pt-13">
       <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 md:p-8">
       <h1 className="text-4xl font-bold text-center mb-8">Charnjeet's Portfolio</h1>
         <div className="flex flex-col md:flex-row md:gap-12 items-center">
