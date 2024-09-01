@@ -27,7 +27,7 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
-        <main className="max-w-4xl mx-auto p-4">
+        <main className=" mx-auto p-4">
           {children}
         </main>
         <footer className="bg-cyan-400 text-white p-4 mt-8">
