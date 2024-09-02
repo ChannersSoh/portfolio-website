@@ -1,5 +1,7 @@
 Charnjeet's Portfolio
 
+Deployed Website: https://charnjeets-portfolio.vercel.app/
+
 Welcome to my Portfolio! This website is a showcase of my technical skills and creative capabilities as a software developer. It includes a home page, an about me section detailing my journey and motivations, and a projects page highlighting various completed projects. Built using Next.js, TypeScript, and Tailwind CSS, this site demonstrates my expertise in creating functional, responsive web applications.
 
 Features:
@@ -14,32 +16,31 @@ Tech Stack:
 - TypeScript: Enhances code quality through static type checking.
 - Tailwind CSS: Utility-first CSS framework for rapid, responsive design.
 
-Installation
+Installation: 
 
 To run this project locally, follow these steps:
 
-    Clone the Repository:
+Clone the Repository:
 
-    bash
-
-git clone https://github.com/yourusername/portfolio.git
+```
+git clone https://github.com/ChannersSoh/portfolio-website.git
+```
 
 Navigate to the Project Directory:
 
-bash
-
-cd portfolio
+```
+cd portfolio-website
+```
 
 Install Dependencies:
-
-bash
-
+```
 npm install
+```
 
 Run the Development Server:
 
-bash
-
+```
 npm run dev
+```
 
 The application will be available at http://localhost:3000.
