@@ -1,6 +1,7 @@
 Charnjeet's Portfolio
 
 Welcome to my Portfolio! This website is a showcase of my technical skills and creative capabilities as a software developer. It includes a home page, an about me section detailing my journey and motivations, and a projects page highlighting various completed projects. Built using Next.js, TypeScript, and Tailwind CSS, this site demonstrates my expertise in creating functional, responsive web applications.
+
 Features:
 
 - Home Page: An engaging introduction that provides an overview of who I am and what I offer.
