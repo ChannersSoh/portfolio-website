@@ -2,18 +2,16 @@ import React from 'react';
 
 const Gamerly = () => {
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white text-sky-800 shadow-lg rounded-2xl text-center mt-12">
-      {/* Title */}
+    <div className="max-w-5xl mx-auto p-8 bg-white text-sky-800 shadow-lg rounded-2xl text-center mt-12">
+  
       <h1 className="text-4xl font-extrabold mb-4 drop-shadow-md">
         Gamerly
       </h1>
 
-      {/* Description */}
       <p className="text-lg mb-6">
         Gamerly is a dynamic social media platform tailored for gamers. The application allows users to register for an account, log in, and interact with a range of gaming-related features. Upon logging in, users are presented with a selection of popular games drawn from a comprehensive database. They can select 1-3 games of interest and are subsequently directed to a personalized homepage.
       </p>
 
-      {/* Features Section */}
       <section className="border-t border-gray-300 pt-6 mt-6">
         <h2 className="text-3xl font-semibold mb-4">Features</h2>
         <ul className="space-y-4">
@@ -26,7 +24,6 @@ const Gamerly = () => {
         </ul>
       </section>
 
-      {/* Tech Stack Section */}
       <section className="border-t border-gray-300 pt-6 mt-6">
         <h2 className="text-3xl font-semibold mb-4">Tech Stack</h2>
         <p className="text-lg mb-6">
@@ -34,7 +31,6 @@ const Gamerly = () => {
         </p>
       </section>
 
-      {/* Challenges Section */}
       <section className="border-t border-gray-300 pt-6 mt-6">
         <h2 className="text-3xl font-semibold mb-4">Challenges Faced</h2>
         <ul className="space-y-4">
@@ -44,7 +40,6 @@ const Gamerly = () => {
         </ul>
       </section>
 
-      {/* GitHub Link */}
       <a
         href="https://github.com/ChannersSoh/gamerly"
         className="inline-block bg-blue-500 text-white font-bold py-2 px-4 mt-4 rounded-full hover:bg-blue-700 transition duration-300"
@@ -54,7 +49,6 @@ const Gamerly = () => {
         View on GitHub
       </a>
 
-      {/* Video Demo */}
       <div className="mt-8">
         <video className="mx-auto rounded-lg shadow-lg" controls width="600">
           <source src="/ui/pictures/gamerly.mp4" type="video/mp4" />

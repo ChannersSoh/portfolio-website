@@ -10,7 +10,7 @@ const Ncnews = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white text-sky-800 shadow-lg rounded-2xl text-center mt-12 ">
+    <div className="max-w-5xl mx-auto p-8 bg-white text-sky-800 shadow-lg rounded-2xl text-center mt-12 ">
     
       <h1 className="text-4xl font-extrabold mb-4 drop-shadow-md">
         NC News
